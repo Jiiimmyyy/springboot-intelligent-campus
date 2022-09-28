@@ -33,7 +33,7 @@ public class Clazz implements Serializable {
     /**
      * 
      */
-    private String introduction;
+    private String introducation;
 
     /**
      * 

@@ -44,7 +44,7 @@ public class Grade implements Serializable {
     /**
      * 
      */
-    private String introduction;
+    private String introducation;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

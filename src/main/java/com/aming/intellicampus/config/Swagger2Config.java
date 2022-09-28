@@ -56,7 +56,9 @@ public class Swagger2Config {
                 .select()
                 //可以测试请求头中：输入token
                 //apiOperation注解所在的API，都生成文档
-                .apis(RequestHandlerSelectors.withClassAnnotation(ApiOperation.class))
+//                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                .apis(RequestHandlerSelectors.basePackage("com.aming.intellicampus.controller"))
+
                 //过滤掉admin路径下的所有页面
                 //.paths(Predicates.and(PathSelectors.regex("/sms/.*")))
                 //过滤掉所有error或error.*页面

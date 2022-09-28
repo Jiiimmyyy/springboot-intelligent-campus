@@ -1,6 +1,8 @@
 package com.aming.intellicampus.service;
 
+import com.aming.intellicampus.pojo.LoginForm;
 import com.aming.intellicampus.pojo.Student;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -10,4 +12,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface StudentService extends IService<Student> {
 
+    Student login(LoginForm loginForm);
+
+    Page getStudentsByOpr(Page<Student> teacherPage, Student student);
+
+    boolean updatePwd(Long userId, String oldPassword, String newPassword);
 }
